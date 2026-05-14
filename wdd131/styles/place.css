@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #BC002D; /* Red from Japanese flag */
+    --primary-color: #000000; /* Black from Ugandan flag */
     --secondary-color: #FFFFFF; /* White */
-    --accent-color: #000000; /* Black */
+    --accent-color: #FFCD00; /* Yellow */
+    --highlight-color: #D90000; /* Red */
     --background-color: #F5F5F5;
     --text-color: #333333;
     --font-family: 'Arial', sans-serif;
@@ -17,7 +18,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--accent-color);
     text-align: center;
     padding: 1rem;
 }
@@ -28,7 +29,8 @@ header {
 }
 
 .weather {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     padding: 1rem;
     margin: 1rem;
     border-radius: 8px;
@@ -51,7 +53,7 @@ header {
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     color: var(--secondary-color);
     text-align: center;
     padding: 1rem;

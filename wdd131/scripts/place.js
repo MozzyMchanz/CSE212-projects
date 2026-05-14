@@ -9,8 +9,8 @@ function calculateWindChill(temp, windSpeed) {
 }
 
 // Static values
-const temperature = 15; // °C
-const windSpeed = 10; // km/h
+const temperature = 25; // °C
+const windSpeed = 5; // km/h
 
 let windChill = 'N/A';
 if (temperature <= 10 && windSpeed > 4.8) {
