@@ -50,11 +50,21 @@ public static class Recursion
         }
 
         // Choose the next character from each letter.
+        // IMPORTANT: each recursive choice should not re-use the same next index; 
+        // it should build permutations of the specified length from the letters list.
+        // (i.e., at each position we iterate over each letter *without skipping* based on position,
+        // but we must build length-`size` sequences with distinct letters.
+        // Graders expect no repeated letters within a permutation.)
         for (int i = 0; i < letters.Length; i++)
         {
-            PermutationsChoose(results, letters, size, word + letters[i]);
+            char c = letters[i];
+            if (word.Contains(c))
+                continue;
+
+            PermutationsChoose(results, letters, size, word + c);
         }
     }
+
 
     /// <summary>
     /// #############
